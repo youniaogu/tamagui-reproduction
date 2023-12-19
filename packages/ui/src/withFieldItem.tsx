@@ -52,6 +52,11 @@ function withFieldItem<T extends FieldItem>(Comp: React.ComponentType<T>) {
               {label}
             </CustomText>
           )}
+          {label && (
+            <CustomText variant={'body2'} color={'$gray11'}>
+              {label}
+            </CustomText>
+          )}
           {instruction && <StyledInstruction>{instruction}</StyledInstruction>}
           <Comp errored={errored} {...(originalProps as T)} name={name} />
         </YStack>
